@@ -43,3 +43,12 @@ def handle_user_input():
 
 if __name__ == "__main__":
     handle_user_input()
+
+def smooth_deceleration(motor_id, start_speed, end_speed, duration):
+    step = (start_speed - end_speed) / duration
+    current_speed = start_speed
+    
+    for _ in range(duration):
+        set_speed(motor_id, int(current_speed))
+        current_speed -= step
+        time.sleep(1)
