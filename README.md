@@ -1,2 +1,1 @@
-# RobotMotorsControl
-Обучение Skillbox
+# Robot Motors Control Project
